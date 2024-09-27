@@ -1,0 +1,36 @@
+@page "/Calculadora"
+
+<PageTitle>Calculadora</PageTitle>
+
+<h1>Calculadora</h1>
+
+<p>Calculadora para realizar operaciones basicas</p>
+
+
+@code {
+    private double Num1 { get; set; }
+    private double Num2 { get; set; }
+    private string Resultado { get; set; }
+
+    private void Calcular()
+    {
+        // Implementamos las 4 operaciones básicas aquí
+        switch (Operacion)
+        {
+            case "+":
+                Resultado = (Num1 + Num2).ToString();
+                break;
+            case "-":
+                Resultado = (Num1 - Num2).ToString();
+                break;
+            case "*":
+                Resultado = (Num1 * Num2).ToString();
+                break;
+            case "/":
+                Resultado = (Num1 / Num2).ToString();
+                break;
+        }
+    }
+
+    private string Operacion { get; set; }
+}
